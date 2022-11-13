@@ -5,8 +5,12 @@ using UnityEngine;
 public class RubyController : MonoBehaviour
 {
     public int maxHealth = 5;
+    public float timeInvicible = 2.0f;
+
     public int health { get { return currentHealth; } }
     int currentHealth;
+
+    bool isInvicible
 
     public float speed = 3.0f;
 
