@@ -27,7 +27,7 @@ public class EnemyController : MonoBehaviour
 
         if (vertical)
         {
-            position.y = position.y + speed - 
+            position.y = position.y + speed * Time.deltaTime;
         }
         position.x = position.x + speed * Time.deltaTime;
 
