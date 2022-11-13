@@ -33,6 +33,9 @@ public class EnemyController : MonoBehaviour
             direction = -direction;
             timer = changeTime;
         }
+
+        animator.SetFloat("Move X", 0);
+        animator.SetFloat("Move Y", direction);
     }
 
     void FixedUpdate()
