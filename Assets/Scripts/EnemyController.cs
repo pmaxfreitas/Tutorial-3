@@ -22,6 +22,6 @@ public class EnemyController : MonoBehaviour
     {
         Vector2 position = transform.position;
 
-        position.x = position.x + speed;
+        position.x = position.x + speed * Time.deltaTime;
     }
 }
