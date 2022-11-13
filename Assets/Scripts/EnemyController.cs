@@ -6,6 +6,8 @@ public class EnemyController : MonoBehaviour
 {
     public float speed = 3.0f;
 
+    Rigidbody2D rigidbody2D;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +22,9 @@ public class EnemyController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 position = transform.position;
-
+        Vector2 position = rigidbody2D.position;
         position.x = position.x + speed * Time.deltaTime;
+
+        rigidbody2D.MovePosition(position);
     }
 }
