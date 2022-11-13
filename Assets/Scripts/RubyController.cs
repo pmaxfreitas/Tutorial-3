@@ -39,6 +39,8 @@ public class RubyController : MonoBehaviour
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
 
+        Vector2 move = new Vector2(horizontal, vertical);
+
         if (isInvincible)
         {
             invincibleTimer -= Time.deltaTime;
