@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class RubyController : MonoBehaviour
 {
+    Rigidbody2D rigidbody2D;
     float horizontal;
     float vertical;
 
@@ -24,9 +25,9 @@ public class RubyController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Vector2 position = transform.position;
+        Vector2 position = rigidbody2D.position;
         position.x = position.x + 3.0f * horizontal * Time.deltaTime;
         position.y = position.y + 3.0f * vertical * Time.deltaTime;
-        
+
     }
 }
