@@ -16,12 +16,19 @@ public class EnemyController : MonoBehaviour
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        timer = changeTime;
     }
 
     // Update is called once per frame
     void Update()
     {
+        timer -= Time.deltaTime;
 
+        if (timer < 0)
+        {
+            direction = -direction;
+            timer = changeTime;
+        }
     }
 
     void FixedUpdate()
