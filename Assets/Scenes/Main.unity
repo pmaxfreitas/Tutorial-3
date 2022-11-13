@@ -5486,10 +5486,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TreeBig3
       objectReference: {fileID: 0}
-    - target: {fileID: 7616644549368321531, guid: a5daf1dcc1b76c44b9f5796d9630f38c, type: 3}
-      propertyPath: m_SpriteSortPoint
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8749588063217303418, guid: a5daf1dcc1b76c44b9f5796d9630f38c, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -5600,6 +5596,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1716581211787522253, guid: 008dfd646065f954884b1b2ed4ab22af, type: 3}
+      propertyPath: m_Size.x
+      value: 5.12
+      objectReference: {fileID: 0}
     - target: {fileID: 2716275212244951641, guid: 008dfd646065f954884b1b2ed4ab22af, type: 3}
       propertyPath: m_Name
       value: Damageable
@@ -5610,11 +5610,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6500089062110226804, guid: 008dfd646065f954884b1b2ed4ab22af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.48
+      value: -3.89
       objectReference: {fileID: 0}
     - target: {fileID: 6500089062110226804, guid: 008dfd646065f954884b1b2ed4ab22af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.49
+      value: -3.35
       objectReference: {fileID: 0}
     - target: {fileID: 6500089062110226804, guid: 008dfd646065f954884b1b2ed4ab22af, type: 3}
       propertyPath: m_LocalPosition.z
