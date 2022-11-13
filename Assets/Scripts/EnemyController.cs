@@ -12,11 +12,15 @@ public class EnemyController : MonoBehaviour
     float timer;
     int direction = 1;
 
+    Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         timer = changeTime;
+
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
