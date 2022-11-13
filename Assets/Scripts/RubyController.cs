@@ -36,7 +36,7 @@ public class RubyController : MonoBehaviour
 
         if (isInvincible)
         {
-            invincibleTimer = Time.deltaTime;
+            invincibleTimer -= Time.deltaTime;
             if (invincibleTimer < 0)
             {
                 isInvincible = false;
