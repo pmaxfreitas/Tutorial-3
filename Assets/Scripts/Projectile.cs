@@ -17,4 +17,9 @@ public class Projectile : MonoBehaviour
     {
 
     }
+
+    void Launch(Vector2 direction, float force)
+    {
+
+    }
 }
