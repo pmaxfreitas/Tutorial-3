@@ -81,7 +81,7 @@ public class EnemyController : MonoBehaviour
         {
             player.ChangeHealth(-1);
 
-            controller.PlaySound(hitClip);
+            player.PlaySound(hitClip);
         }
     }
 
