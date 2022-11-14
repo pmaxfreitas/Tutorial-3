@@ -26,6 +26,8 @@ public class RubyController : MonoBehaviour
     public GameObject projectilePrefab;
 
     AudioSource audioSource;
+    public AudioClip throwSound;
+    public AudioClip hitSound;
 
     // Start is called before the first frame update
     void Start()
