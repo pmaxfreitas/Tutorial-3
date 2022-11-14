@@ -16,6 +16,8 @@ public class EnemyController : MonoBehaviour
 
     bool broken = true;
 
+    public ParticleSystem smokeEffect;
+
     // Start is called before the first frame update
     void Start()
     {
