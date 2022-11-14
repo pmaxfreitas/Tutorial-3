@@ -18,6 +18,8 @@ public class EnemyController : MonoBehaviour
 
     public ParticleSystem smokeEffect;
 
+    AudioClip hitClip;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -78,6 +80,8 @@ public class EnemyController : MonoBehaviour
         if (player != null)
         {
             player.ChangeHealth(-1);
+
+            controller.PlaySound(hitClip);
         }
     }
 
