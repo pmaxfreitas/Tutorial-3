@@ -107,6 +107,7 @@ public class RubyController : MonoBehaviour
             invincibleTimer = timeInvincible;
 
             animator.SetTrigger("Hit");
+            PlaySound(hitSound);
         }
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
@@ -122,6 +123,7 @@ public class RubyController : MonoBehaviour
         projectile.Launch(lookDirection, 300);
 
         animator.SetTrigger("Launch");
+        
     }
 
     public void PlaySound(AudioClip clip)
