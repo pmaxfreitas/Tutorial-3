@@ -66,6 +66,11 @@ public class RubyController : MonoBehaviour
         {
             Launch();
         }
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            
+        }
     }
 
     void FixedUpdate()
