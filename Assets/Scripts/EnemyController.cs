@@ -18,7 +18,7 @@ public class EnemyController : MonoBehaviour
 
     public ParticleSystem smokeEffect;
 
-    AudioClip hitClip;
+    public AudioClip hitClip;
 
     // Start is called before the first frame update
     void Start()
