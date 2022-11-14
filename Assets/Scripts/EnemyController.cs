@@ -44,6 +44,11 @@ public class EnemyController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!broken)
+        {
+            return;
+        }
+
         Vector2 position = rigidbody2D.position;
 
         if (vertical)
