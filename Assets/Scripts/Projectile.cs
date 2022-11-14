@@ -30,7 +30,9 @@ public class Projectile : MonoBehaviour
         {
             e.Fix();
         }
-
-        Destroy(gameObject);
+        if (transform.position.magnitude > 1000.0f)
+        {
+            Destroy(gameObject);
+        }
     }
 }
