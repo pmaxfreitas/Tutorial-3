@@ -36359,6 +36359,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CollectibleAmmo
       objectReference: {fileID: 0}
+    - target: {fileID: 1835376634459522731, guid: bc590caecca45594cbca898df584bbe5, type: 3}
+      propertyPath: m_TagString
+      value: Cogs
+      objectReference: {fileID: 0}
     - target: {fileID: 7232464057375837667, guid: bc590caecca45594cbca898df584bbe5, type: 3}
       propertyPath: m_RootOrder
       value: 13
