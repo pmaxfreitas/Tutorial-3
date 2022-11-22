@@ -103,16 +103,6 @@ public class RubyController : MonoBehaviour
             }
         }
 
-        if(currentHealth <= 0)
-        {
-            gameOver.text = "You Lose!\n\nPress R to Restart";
-            gameOverBool = true;
-            Destroy(GetComponent<SpriteRenderer>());
-            speed = 0;
-
-            ChangeMusic(loss);
-        }
-
         if(scoreValue >= 1)
         {
             gameOver.text = "You Win!\nCreated by Max Freitas\n\nPress R to Restart";
@@ -163,6 +153,16 @@ public class RubyController : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
 
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
+
+        if(currentHealth <= 0)
+        {
+            gameOver.text = "You Lose!\n\nPress R to Restart";
+            gameOverBool = true;
+            Destroy(GetComponent<SpriteRenderer>());
+            speed = 0;
+
+            ChangeMusic(loss);
+        }
     }
 
     void Launch()
