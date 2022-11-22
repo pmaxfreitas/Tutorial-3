@@ -31104,7 +31104,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1234068120}
-  - component: {fileID: 1234068119}
   - component: {fileID: 1234068118}
   m_Layer: 0
   m_Name: BkgMusic
@@ -31209,18 +31208,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1234068119
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1234068117}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a9e682a1131e4604aa2646b4fcc2ad62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1234068120
 Transform:
   m_ObjectHideFlags: 0
@@ -36343,5 +36330,9 @@ PrefabInstance:
       propertyPath: gameOver
       value: 
       objectReference: {fileID: 1846652002}
+    - target: {fileID: 8418664856855592201, guid: 56d809d48921e964ea0cc09938cb35b6, type: 3}
+      propertyPath: gameOverBool
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56d809d48921e964ea0cc09938cb35b6, type: 3}
