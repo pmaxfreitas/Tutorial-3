@@ -111,6 +111,8 @@ public class RubyController : MonoBehaviour
 
             animator.SetTrigger("Hit");
             PlaySound(hitSound);
+
+            healthDown.Play();
         }
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
