@@ -118,7 +118,7 @@ public class RubyController : MonoBehaviour
             gameOver.text = "You Win!\nCreated by Max Freitas\n\nPress R to Restart";
             gameOverBool = true;
 
-            ChangeMusic(temp);
+            ChangeMusic(victory);
         }
 
         if(gameOverBool == true)
