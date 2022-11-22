@@ -101,6 +101,7 @@ public class RubyController : MonoBehaviour
             gameOver.text = "You Lose!\n\nPress R to Restart";
             gameOverBool = true;
             Destroy(GetComponent<SpriteRenderer>());
+            speed = 0;
         }
 
         if(scoreValue >= 1)
