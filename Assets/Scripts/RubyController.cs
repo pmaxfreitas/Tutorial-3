@@ -182,12 +182,9 @@ public class RubyController : MonoBehaviour
             score.text = "Robots Fixed: " + scoreValue.ToString() + "/6";
         }
 
-        if(scoreValue >= 1)
+        if(scoreValue == 6)
         {
-            gameOver.text = "You Win!\nCreated by Max Freitas\n\nPress R to Restart";
-            gameOverBool = true;
-
-            ChangeMusic(victory);
+            gameOver.text = "Talk to Jambi to visit stage two!";
         }
     }
 
