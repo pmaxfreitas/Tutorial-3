@@ -37,6 +37,7 @@ public class RubyController : MonoBehaviour
     public Text score;
     public Text gameOver;
     int scoreValue = 0;
+    bool gameOverBool = false;
 
     // Start is called before the first frame update
     void Start()
@@ -99,21 +100,18 @@ public class RubyController : MonoBehaviour
         {
             gameOver.text = "You Lose!\n\nPress R to Restart";
             Destroy(this);
-
-            if (Input.GetKey(KeyCode.R))
-            {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
+            gameOverBool = true;
         }
 
         if(scoreValue >= 1)
         {
             gameOver.text = "You Win!\nCreated by Max Freitas\n\nPress R to Restart";
+            gameOverBool = true;
+        }
 
-            if (Input.GetKey(KeyCode.R))
-            {
+        if (Input.GetKey(KeyCode.R))
+        {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-            }
         }
     }
 
