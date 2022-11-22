@@ -159,6 +159,7 @@ public class RubyController : MonoBehaviour
             gameOver.text = "You Lose!\n\nPress R to Restart";
             gameOverBool = true;
             Destroy(GetComponent<SpriteRenderer>());
+            Destroy(GetComponent<BoxCollider2D>());
             speed = 0;
 
             ChangeMusic(loss);
