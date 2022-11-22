@@ -33413,7 +33413,7 @@ GameObject:
   - component: {fileID: 1759286110}
   - component: {fileID: 1759286109}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: Cogs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -36403,6 +36403,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8418664856855592201, guid: 56d809d48921e964ea0cc09938cb35b6, type: 3}
+      propertyPath: cogs
+      value: 
+      objectReference: {fileID: 1759286109}
     - target: {fileID: 8418664856855592201, guid: 56d809d48921e964ea0cc09938cb35b6, type: 3}
       propertyPath: score
       value: 
