@@ -109,7 +109,6 @@ public class RubyController : MonoBehaviour
             gameOverBool = true;
             Destroy(GetComponent<SpriteRenderer>());
             speed = 0;
-            Destroy(this);
 
             ChangeMusic(loss);
         }
