@@ -103,14 +103,6 @@ public class RubyController : MonoBehaviour
             }
         }
 
-        if(scoreValue >= 1)
-        {
-            gameOver.text = "You Win!\nCreated by Max Freitas\n\nPress R to Restart";
-            gameOverBool = true;
-
-            ChangeMusic(victory);
-        }
-
         if(gameOverBool == true)
         {
             if (Input.GetKey(KeyCode.R))
