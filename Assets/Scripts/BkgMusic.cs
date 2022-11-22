@@ -11,12 +11,12 @@ public class BkgMusic : MonoBehaviour
     void Start()
     {
         audioSource = gameObject.GetComponent<AudioSource>();
-
-        RubyController player = GameObject.Find("Ruby").GetComponent<RubyController>();
     }
 
     void Update()
     {
+        RubyController player = GameObject.Find("Ruby").GetComponent<RubyController>();
+
         if(player.currentHealth <= 0)
         {
             audioSource.clip = loss;
