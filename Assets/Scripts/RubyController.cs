@@ -29,8 +29,8 @@ public class RubyController : MonoBehaviour
     public AudioClip throwSound;
     public AudioClip hitSound;
 
-    public GameObject healthUp;
-    public GameObject healthDown;
+    public ParticleSystem healthUp;
+    public ParticleSystem healthDown;
 
     // Start is called before the first frame update
     void Start()
@@ -112,14 +112,14 @@ public class RubyController : MonoBehaviour
             animator.SetTrigger("Hit");
             PlaySound(hitSound);
 
-            GameObject healthDownObject = Instantiate(healthDOWN, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
+            ParticleSystem healthDownObject = Instantiate(healthDOWN, rigidbody2D.position + Vector2.up * 0.5f, Quaternion.identity);
         }
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
 
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
 
-        GameObject healthUpObject = Instantiate(healthUP, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
+        ParticleSystem healthUpObject = Instantiate(healthUP, rigidbody2D.position + Vector2.up * 0.5f, Quaternion.identity);
     }
 
     void Launch()
