@@ -34219,7 +34219,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: GameOverText
+  m_Text: 
 --- !u!222 &1846652003
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -36326,5 +36326,9 @@ PrefabInstance:
       propertyPath: score
       value: 
       objectReference: {fileID: 1716265205}
+    - target: {fileID: 8418664856855592201, guid: 56d809d48921e964ea0cc09938cb35b6, type: 3}
+      propertyPath: gameOver
+      value: 
+      objectReference: {fileID: 1846652002}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56d809d48921e964ea0cc09938cb35b6, type: 3}
