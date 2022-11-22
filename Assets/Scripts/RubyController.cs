@@ -168,6 +168,8 @@ public class RubyController : MonoBehaviour
 
     void Launch()
     {
+        if(cogsValue > 0)
+        {
         GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2D.position + Vector2.up * 0.5f, Quaternion.identity);
 
         Projectile projectile = projectileObject.GetComponent<Projectile>();
@@ -175,6 +177,10 @@ public class RubyController : MonoBehaviour
 
         animator.SetTrigger("Launch");
         PlaySound(throwSound);
+
+        cogsValue--;
+        cogs.text = "Cogs: " + cogsValue.ToString();
+        }
     }
 
     public void PlaySound(AudioClip clip)
