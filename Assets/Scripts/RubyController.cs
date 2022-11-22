@@ -34,6 +34,8 @@ public class RubyController : MonoBehaviour
     public AudioClip throwSound;
     public AudioClip hitSound;
 
+    public AudioClip temp;
+
     public GameObject healthUpPrefab;
     public GameObject healthDownPrefab;
 
@@ -108,7 +110,6 @@ public class RubyController : MonoBehaviour
             Destroy(GetComponent<SpriteRenderer>());
             speed = 0;
 
-            bkgMusic.Stop();
             ChangeMusic(loss);
         }
 
@@ -117,8 +118,7 @@ public class RubyController : MonoBehaviour
             gameOver.text = "You Win!\nCreated by Max Freitas\n\nPress R to Restart";
             gameOverBool = true;
 
-            bkgMusic.Stop();
-            ChangeMusic(victory);
+            ChangeMusic(temp);
         }
 
         if(gameOverBool == true)
@@ -192,6 +192,7 @@ public class RubyController : MonoBehaviour
 
     public void ChangeMusic(AudioClip music)
     {
+        bkgMusic.Stop();
         bkgMusic.clip = music;
         bkgMusic.Play();
     }
