@@ -217,11 +217,12 @@ public class RubyController : MonoBehaviour
         bkgMusic.Play();
     }
 
-    void OnCollisionEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Cogs")
         {
             cogsValue += 4;
+            Destroy(other);
         }
     }
 }
