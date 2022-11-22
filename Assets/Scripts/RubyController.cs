@@ -97,7 +97,7 @@ public class RubyController : MonoBehaviour
 
         if(currentHealth <= 0)
         {
-            gameOver.text = "You Lose! Press R to Restart";
+            gameOver.text = "You Lose!\n\nPress R to Restart";
             Destroy(this);
 
             if (Input.GetKey(KeyCode.R))
@@ -106,7 +106,7 @@ public class RubyController : MonoBehaviour
             }
         }
 
-        if(scoreValue == 1)
+        if(scoreValue >= 1)
         {
             gameOver.text = "You Win!\nCreated by Max Freitas\n\nPress R to Restart";
 
