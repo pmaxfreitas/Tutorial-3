@@ -17,14 +17,19 @@ public class BkgMusic : MonoBehaviour
     {
         RubyController player = GameObject.Find("Ruby").GetComponent<RubyController>();
 
-        if(player.currentHealth <= 0)
+        if(player.gameOverBool == true)
         {
-            audioSource.clip = loss;
-        }
-        
-        if(player.scoreValue >= 1)
-        {
-            audioSource.clip = victory;
+            if(player.currentHealth <= 0)
+            {
+                audioSource.clip = loss;
+            }
+            
+            if(player.scoreValue >= 1)
+            {
+                audioSource.clip = victory;
+            }
+
+            audioSource.Play();
         }
     }
 }
