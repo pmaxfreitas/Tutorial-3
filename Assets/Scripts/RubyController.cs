@@ -222,7 +222,7 @@ public class RubyController : MonoBehaviour
         if(other.tag == "Cogs")
         {
             cogsValue += 4;
-            Destroy(other);
+            Destroy(other.gameObject);
             cogs.text = "Cogs: " + cogsValue.ToString();
         }
     }
