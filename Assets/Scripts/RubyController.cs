@@ -99,6 +99,7 @@ public class RubyController : MonoBehaviour
                 if(scoreValue == 6)
                 {
                     SceneManager.LoadScene("StageTwo");
+                    level = 2;
                 }
                 else if (character != null)
                 {
@@ -189,6 +190,11 @@ public class RubyController : MonoBehaviour
         if(scoreValue == 6)
         {
             gameOver.text = "Talk to Jambi to visit stage two!";
+        }
+
+        if(scoreValue == 7 & level == 2)
+        {
+            gameOver.text = "You Win!\nCreated by Max Freitas\n\nPress R to Restart";
         }
     }
 
