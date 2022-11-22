@@ -100,7 +100,7 @@ public class RubyController : MonoBehaviour
             gameOver.text = "You Lose! Press R to Restart";
             Destroy(this);
 
-            if(Input.GetKey(KeyCode.R))
+            if (Input.GetKey(KeyCode.R))
             {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
@@ -109,6 +109,11 @@ public class RubyController : MonoBehaviour
         if(scoreValue == 1)
         {
             gameOver.text = "You Win!\nCreated by Max Freitas\n\nPress R to Restart";
+
+            if (Input.GetKey(KeyCode.R))
+            {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
         }
     }
 
