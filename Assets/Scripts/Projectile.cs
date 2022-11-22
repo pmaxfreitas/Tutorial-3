@@ -27,9 +27,12 @@ public class Projectile : MonoBehaviour
     {
         EnemyController e = other.collider.GetComponent<EnemyController>();
         HardEnemyController h = other.collider.GetComponent<HardEnemyController>();
-        if ((e | h) != null)
+        if (e != null)
         {
             e.Fix();
+        }
+        if (h != null)
+        {
             h.Fix();
         }
         if (transform.position.magnitude > 1000.0f)
