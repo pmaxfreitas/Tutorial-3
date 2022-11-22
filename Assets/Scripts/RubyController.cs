@@ -33,8 +33,7 @@ public class RubyController : MonoBehaviour
     public AudioClip loss;
     public AudioClip throwSound;
     public AudioClip hitSound;
-
-    public AudioClip temp;
+    public AudioClip cogSound;
 
     public GameObject healthUpPrefab;
     public GameObject healthDownPrefab;
