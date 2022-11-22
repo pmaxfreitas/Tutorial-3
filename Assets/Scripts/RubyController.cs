@@ -115,11 +115,14 @@ public class RubyController : MonoBehaviour
             GameObject healthDownObject = Instantiate(healthDOWN, rigidbody2D.position, Quaternion.identity);
         }
 
+        if(amount > 0)
+        {
+            GameObject healthUpObject = Instantiate(healthUP, rigidbody2D.position, Quaternion.identity);
+        }
+
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
 
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
-
-        GameObject healthUpObject = Instantiate(healthUP, rigidbody2D.position, Quaternion.identity);
     }
 
     void Launch()
