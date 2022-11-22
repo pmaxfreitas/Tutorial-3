@@ -36295,10 +36295,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5630565570085758820, guid: 56d809d48921e964ea0cc09938cb35b6, type: 3}
-      propertyPath: playOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8418664856855592196, guid: 56d809d48921e964ea0cc09938cb35b6, type: 3}
       propertyPath: m_Name
       value: Ruby
