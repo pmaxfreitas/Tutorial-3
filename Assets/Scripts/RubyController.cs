@@ -181,6 +181,14 @@ public class RubyController : MonoBehaviour
         scoreValue = scoreValue + scoreAmount;
         score.text = "Robots Fixed " + scoreValue.ToString() + "/6";
         }
+
+        if(scoreValue >= 1)
+        {
+            gameOver.text = "You Win!\nCreated by Max Freitas\n\nPress R to Restart";
+            gameOverBool = true;
+
+            ChangeMusic(victory);
+        }
     }
 
     public void ChangeMusic(AudioClip music)
