@@ -102,7 +102,7 @@ public class RubyController : MonoBehaviour
 
         if(scoreValue == 1)
         {
-            gameOver.text = "You Win!\nCreated by Max Freitas";
+            gameOver.text = "You Win!\nCreated by Max Freitas\n\nPress R to Restart";
         }
     }
 
