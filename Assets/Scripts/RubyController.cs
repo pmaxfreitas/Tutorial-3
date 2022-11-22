@@ -60,6 +60,13 @@ public class RubyController : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
 
         bkgMusic = GameObject.Find("BkgMusic").GetComponent<AudioSource>();
+
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        if(sceneName == "StageTwo")
+        {
+            level = 2;
+        }
     }
 
     void Update()
