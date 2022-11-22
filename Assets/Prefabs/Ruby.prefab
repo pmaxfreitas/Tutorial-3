@@ -106,8 +106,11 @@ MonoBehaviour:
   currentHealth: 0
   speed: 4
   projectilePrefab: {fileID: 3628115334112057389, guid: 353763a8450873a44b36362a8eb2dd4d, type: 3}
+  victory: {fileID: 8300000, guid: 94226819096503940a3dd07aada2a874, type: 3}
+  loss: {fileID: 8300000, guid: 6f8d9105c03f0d44d9db301ca62593a2, type: 3}
   throwSound: {fileID: 8300000, guid: b2edfd40873655249ba0e01a5cf705be, type: 3}
   hitSound: {fileID: 8300000, guid: 9b1bb1f450b7d444fa4a8019d13519a7, type: 3}
+  temp: {fileID: 8300000, guid: e406c04157c663a43b859646b7ad3c2a, type: 3}
   healthUpPrefab: {fileID: 2089865229074007922, guid: c649ec62331ddf649abb6dab150313cf, type: 3}
   healthDownPrefab: {fileID: 6880090865470007701, guid: 2a62bdfb25539e0438545df3eb2bd488, type: 3}
   score: {fileID: 0}
