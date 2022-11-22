@@ -113,7 +113,7 @@ public class RubyController : MonoBehaviour
             PlaySound(hitSound);
 
             GameObject healthDownObject = Instantiate(healthDownPrefab, rigidbody2D.position, Quaternion.identity);
-            healthDownObject.
+            healthDownObject.SetActive(true);
         }
 
         if(amount > 0)
