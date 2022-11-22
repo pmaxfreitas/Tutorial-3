@@ -100,7 +100,7 @@ public class RubyController : MonoBehaviour
         {
             gameOver.text = "You Lose!\n\nPress R to Restart";
             gameOverBool = true;
-            Destroy(rigidbody2D);
+            Destroy(GameObject);
         }
 
         if(scoreValue >= 1)
