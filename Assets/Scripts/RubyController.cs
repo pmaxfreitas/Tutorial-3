@@ -34,6 +34,7 @@ public class RubyController : MonoBehaviour
     public GameObject healthDownPrefab;
 
     public Text score;
+    public Text gameOver;
     int scoreValue = 0;
 
     // Start is called before the first frame update
@@ -91,6 +92,11 @@ public class RubyController : MonoBehaviour
                     character.DisplayDialog();
                 }
             }
+        }
+
+        if(scoreValue == 6)
+        {
+            gameOver.text = "You Win! /n Created by Max Freitas"
         }
     }
 
