@@ -100,6 +100,7 @@ public class RubyController : MonoBehaviour
         {
             gameOver.text = "You Lose!\n\nPress R to Restart";
             gameOverBool = true;
+            rigidbody2D.enabled = false;
         }
 
         if(scoreValue >= 1)
