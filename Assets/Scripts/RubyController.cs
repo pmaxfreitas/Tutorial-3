@@ -109,9 +109,12 @@ public class RubyController : MonoBehaviour
             gameOverBool = true;
         }
 
-        if (Input.GetKey(KeyCode.R))
+        if(gameOverBool == true)
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            if (Input.GetKey(KeyCode.R))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
         }
     }
 
