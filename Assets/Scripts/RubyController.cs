@@ -221,7 +221,7 @@ public class RubyController : MonoBehaviour
     {
         if(other.tag == "Cogs")
         {
-        Cogs cogs = other.GetComponent<
+            cogsValue += 4;
         }
     }
 }
