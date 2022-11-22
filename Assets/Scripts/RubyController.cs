@@ -221,6 +221,7 @@ public class RubyController : MonoBehaviour
         if(scoreValue == 4 && level == 2)
         {
             gameOver.text = "You Win!\nCreated by Max Freitas\n\nPress R to Restart";
+            gameOverBool = true;
             Destroy(GetComponent<SpriteRenderer>());
             Destroy(GetComponent<BoxCollider2D>());
             speed = 0;
