@@ -51,6 +51,8 @@ public class RubyController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        score.text = "Robots Fixed " + scoreValue.ToString() + "/6";
+
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
 
