@@ -94,7 +94,7 @@ public class RubyController : MonoBehaviour
             }
         }
 
-        if(health <= 0)
+        if(currentHealth <= 0)
         {
             gameOver.text = "You Lose! Press R to Restart";
         }
