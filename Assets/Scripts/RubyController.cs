@@ -111,7 +111,7 @@ public class RubyController : MonoBehaviour
             gameOverBool = true;
 
             AudioSource bkgMusic = GameObject.Find("BackgroundMusic").GetComponent<AudioSource>();
-            bkgMusic.AudioClip = victoryMusic;
+            bkgMusic.clip = victoryMusic;
         }
 
         if(gameOverBool == true)
