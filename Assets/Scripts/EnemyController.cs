@@ -83,6 +83,9 @@ public class EnemyController : MonoBehaviour
 
     public void Fix()
     {
+        RubyController r = GameObject.Find("Ruby").GetComponent<RubyController>();
+        r.ChangeScore(1);
+
         broken = false;
         rigidbody2D.simulated = false;
         animator.SetTrigger("Fixed");
