@@ -27,6 +27,7 @@ public class Projectile : MonoBehaviour
     {
         EnemyController e = other.collider.GetComponent<EnemyController>();
         HardEnemyController h = other.collider.GetComponent<HardEnemyController>();
+        RubyController r = GameObject.Find("Ruby").GetComponent<RubyController>();
         if (e != null)
         {
             e.Fix();
