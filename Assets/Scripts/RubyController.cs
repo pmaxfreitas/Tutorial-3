@@ -98,7 +98,6 @@ public class RubyController : MonoBehaviour
         {
             gameOver.text = "You Lose! Press R to Restart";
             Destroy(this);
-            animator.Stop();
         }
 
         if(scoreValue == 1)
