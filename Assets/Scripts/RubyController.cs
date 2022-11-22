@@ -96,7 +96,7 @@ public class RubyController : MonoBehaviour
             if (hit.collider != null)
             {
                 NonPlayerCharacter character = hit.collider.GetComponent<NonPlayerCharacter>();
-                if(scoreValue == 6)
+                if(scoreValue == 1)
                 {
                     SceneManager.LoadScene("StageTwo");
                     level = 2;
