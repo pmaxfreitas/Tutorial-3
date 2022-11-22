@@ -26,7 +26,7 @@ public class HardEnemyController : MonoBehaviour
 
         animator = GetComponent<Animator>();
 
-        speed = GameObject.Find(Ruby).GetComponent<RubyController>().speed;
+        speed = GameObject.Find("Ruby").GetComponent<RubyController>().speed;
     }
 
     // Update is called once per frame
