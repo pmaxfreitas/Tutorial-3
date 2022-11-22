@@ -31216,7 +31216,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1234068117}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.465784, y: 2.8302715, z: 3.1389573}
+  m_LocalPosition: {x: -1.465784, y: 2.8302715, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36323,16 +36323,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8418664856855592201, guid: 56d809d48921e964ea0cc09938cb35b6, type: 3}
+      propertyPath: loss
+      value: 
+      objectReference: {fileID: 8300000, guid: 6f8d9105c03f0d44d9db301ca62593a2, type: 3}
+    - target: {fileID: 8418664856855592201, guid: 56d809d48921e964ea0cc09938cb35b6, type: 3}
       propertyPath: score
       value: 
       objectReference: {fileID: 1716265205}
     - target: {fileID: 8418664856855592201, guid: 56d809d48921e964ea0cc09938cb35b6, type: 3}
+      propertyPath: victory
+      value: 
+      objectReference: {fileID: 8300000, guid: 94226819096503940a3dd07aada2a874, type: 3}
+    - target: {fileID: 8418664856855592201, guid: 56d809d48921e964ea0cc09938cb35b6, type: 3}
       propertyPath: gameOver
       value: 
       objectReference: {fileID: 1846652002}
-    - target: {fileID: 8418664856855592201, guid: 56d809d48921e964ea0cc09938cb35b6, type: 3}
-      propertyPath: gameOverBool
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56d809d48921e964ea0cc09938cb35b6, type: 3}
