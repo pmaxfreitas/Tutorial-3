@@ -28,6 +28,9 @@ public class RubyController : MonoBehaviour
     public GameObject projectilePrefab;
 
     AudioSource audioSource;
+    AudioSource bkgMusic;
+    public AudioClip victory;
+    public AudioClip loss;
     public AudioClip throwSound;
     public AudioClip hitSound;
 
@@ -49,6 +52,8 @@ public class RubyController : MonoBehaviour
         animator = GetComponent<Animator>();
 
         audioSource = GetComponent<AudioSource>();
+
+        bkgMusic = GameObject.Find("BkgMusic").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -102,12 +107,16 @@ public class RubyController : MonoBehaviour
             gameOverBool = true;
             Destroy(GetComponent<SpriteRenderer>());
             speed = 0;
+
+            ChangeMusic(loss);
         }
 
         if(scoreValue >= 1)
         {
             gameOver.text = "You Win!\nCreated by Max Freitas\n\nPress R to Restart";
             gameOverBool = true;
+
+            ChangeMusic(victory);
         }
 
         if(gameOverBool == true)
@@ -177,5 +186,14 @@ public class RubyController : MonoBehaviour
         scoreValue = scoreValue + scoreAmount;
         score.text = "Robots Fixed " + scoreValue.ToString() + "/6";
         }
+    }
+
+    public void ChangeMusic(AudioClip music)
+    {
+        bkgMusic.Stop();
+
+        bkgMusic.clip = music;
+
+        bkgMusic.Play();
     }
 }
