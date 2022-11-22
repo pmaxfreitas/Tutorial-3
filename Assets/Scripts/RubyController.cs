@@ -190,6 +190,7 @@ public class RubyController : MonoBehaviour
 
     public void ChangeMusic(AudioClip music)
     {
-        bkgMusic.Play(music);
+        bkgMusic.clip = music;
+        bkgMusic.Play();
     }
 }
