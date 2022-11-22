@@ -107,6 +107,8 @@ MonoBehaviour:
   projectilePrefab: {fileID: 3628115334112057389, guid: 353763a8450873a44b36362a8eb2dd4d, type: 3}
   throwSound: {fileID: 0}
   hitSound: {fileID: 0}
+  healthUp: {fileID: 2089865229074007924, guid: c649ec62331ddf649abb6dab150313cf, type: 3}
+  healthDown: {fileID: 0}
 --- !u!50 &129450698868160297
 Rigidbody2D:
   serializedVersion: 4
