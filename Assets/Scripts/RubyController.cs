@@ -45,7 +45,7 @@ public class RubyController : MonoBehaviour
     bool gameOverBool = false;
 
     public Text cogs;
-    int cogsValue = 4;
+    int cogsValue = 6;
 
     public static int level;
 
@@ -221,7 +221,7 @@ public class RubyController : MonoBehaviour
     {
         if(other.tag == "Cogs")
         {
-            cogsValue += 4;
+            cogsValue += 6;
             Destroy(other.gameObject);
             cogs.text = "Cogs: " + cogsValue.ToString();
         }
