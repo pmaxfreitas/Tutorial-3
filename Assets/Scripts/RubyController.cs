@@ -94,6 +94,11 @@ public class RubyController : MonoBehaviour
             }
         }
 
+        if(health <= 0)
+        {
+            gameOver.text = "You Lose! Press R to Restart";
+        }
+
         if(scoreValue == 1)
         {
             gameOver.text = "You Win!\nCreated by Max Freitas";
