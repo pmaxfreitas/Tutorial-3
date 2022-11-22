@@ -223,6 +223,7 @@ public class RubyController : MonoBehaviour
         {
             cogsValue += 4;
             Destroy(other);
+            cogs.text = "Cogs: " + cogsValue.ToString();
         }
     }
 }
