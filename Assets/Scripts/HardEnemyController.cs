@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HardEnemyController : MonoBehaviour
 {
-    public float speed = 3.0f;
+    public float speed;
     public bool vertical;
     public float changeTime = 3.0f;
 
@@ -25,6 +25,9 @@ public class HardEnemyController : MonoBehaviour
         timer = changeTime;
 
         animator = GetComponent<Animator>();
+
+        GameObject Ruby = GameObject.Find(Ruby).GetComponent<RubyController>();
+        speed = Ruby.speed;
     }
 
     // Update is called once per frame
