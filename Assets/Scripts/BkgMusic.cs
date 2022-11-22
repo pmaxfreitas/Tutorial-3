@@ -5,8 +5,8 @@ using UnityEngine;
 public class BkgMusic : MonoBehaviour
 {
     AudioSource audioSource;
-    AudioClip victory;
-    AudioClip loss;
+    public AudioClip victory;
+    public AudioClip loss;
 
     void Start()
     {
@@ -20,6 +20,11 @@ public class BkgMusic : MonoBehaviour
         if(player.currentHealth <= 0)
         {
             audioSource.clip = loss;
+        }
+        
+        if(player.scoreValue >= 1)
+        {
+            audioSource.clip = victory;
         }
     }
 }

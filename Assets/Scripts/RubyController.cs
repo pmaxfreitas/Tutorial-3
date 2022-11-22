@@ -10,7 +10,7 @@ public class RubyController : MonoBehaviour
     public float timeInvincible = 2.0f;
 
     public int health { get { return currentHealth; } }
-    int currentHealth;
+    public int currentHealth;
 
     bool isInvincible;
     float invincibleTimer;
@@ -36,7 +36,7 @@ public class RubyController : MonoBehaviour
 
     public Text score;
     public Text gameOver;
-    int scoreValue = 0;
+    public int scoreValue = 0;
     bool gameOverBool = false;
 
     // Start is called before the first frame update
