@@ -194,6 +194,7 @@ public class RubyController : MonoBehaviour
     public void ChangeMusic(AudioClip music)
     {
         bkgMusic.Stop();
+        bkgMusic.volume = 1;
         bkgMusic.clip = music;
         bkgMusic.Play();
     }
