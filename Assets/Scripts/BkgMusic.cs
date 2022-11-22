@@ -6,7 +6,7 @@ public class BkgMusic : MonoBehaviour
 {
     void Start()
     {
-        Play();
+
     }
 
     // Update is called once per frame
