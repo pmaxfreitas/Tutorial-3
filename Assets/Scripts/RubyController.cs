@@ -94,9 +94,9 @@ public class RubyController : MonoBehaviour
             }
         }
 
-        if(scoreValue == 6)
+        if(scoreValue == 1)
         {
-            gameOver.text = "You Win!/nCreated by Max Freitas";
+            gameOver.text = "You Win!\nCreated by Max Freitas";
         }
     }
 
