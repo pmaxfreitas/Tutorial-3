@@ -31,6 +31,7 @@ public class RubyController : MonoBehaviour
     public AudioClip throwSound;
     public AudioClip hitSound;
     public AudioClip victoryMusic;
+    public AudioClip lossMusic;
 
     public GameObject healthUpPrefab;
     public GameObject healthDownPrefab;
@@ -50,6 +51,8 @@ public class RubyController : MonoBehaviour
         animator = GetComponent<Animator>();
 
         audioSource = GetComponent<AudioSource>();
+
+        AudioSource bkgMusic = GameObject.Find("BackgroundMusic").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -110,7 +113,6 @@ public class RubyController : MonoBehaviour
             gameOver.text = "You Win!\nCreated by Max Freitas\n\nPress R to Restart";
             gameOverBool = true;
 
-            AudioSource bkgMusic = GameObject.Find("BackgroundMusic").GetComponent<AudioSource>();
             bkgMusic.clip = victoryMusic;
             bkgMusic.Play();
         }
