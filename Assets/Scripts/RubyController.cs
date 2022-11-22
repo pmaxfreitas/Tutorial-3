@@ -112,13 +112,14 @@ public class RubyController : MonoBehaviour
             animator.SetTrigger("Hit");
             PlaySound(hitSound);
 
-            GameObject healthDownObject = Instantiate(healthDown, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
-            
+            GameObject healthDownObject = Instantiate(healthDOWN, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
         }
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
 
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
+
+        GameObject healthUpObject = Instantiate(healthUP, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
     }
 
     void Launch()
