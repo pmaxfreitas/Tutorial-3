@@ -30,6 +30,7 @@ public class RubyController : MonoBehaviour
     AudioSource audioSource;
     public AudioClip throwSound;
     public AudioClip hitSound;
+    public AudioClip victoryMusic;
 
     public GameObject healthUpPrefab;
     public GameObject healthDownPrefab;
@@ -109,7 +110,7 @@ public class RubyController : MonoBehaviour
             gameOver.text = "You Win!\nCreated by Max Freitas\n\nPress R to Restart";
             gameOverBool = true;
 
-            GameObject.Find("BackgroundMusic").GetComponent<AudioSource>().AudioClip;
+            GameObject.Find("BackgroundMusic").GetComponent<AudioSource>().AudioClip = victoryMusic;
         }
 
         if(gameOverBool == true)
