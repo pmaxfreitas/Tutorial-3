@@ -28,6 +28,7 @@ public class RubyController : MonoBehaviour
     public GameObject projectilePrefab;
 
     AudioSource audioSource;
+    AudioSource bkgMusic;
     public AudioClip throwSound;
     public AudioClip hitSound;
     public AudioClip victoryMusic;
@@ -52,7 +53,7 @@ public class RubyController : MonoBehaviour
 
         audioSource = GetComponent<AudioSource>();
 
-        AudioSource bkgMusic = GameObject.Find("BackgroundMusic").GetComponent<AudioSource>();
+        bkgMusic = GameObject.Find("BackgroundMusic").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
