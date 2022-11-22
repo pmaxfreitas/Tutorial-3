@@ -30,6 +30,7 @@ public class Projectile : MonoBehaviour
         if ((e | h) != null)
         {
             e.Fix();
+            h.Fix();
         }
         if (transform.position.magnitude > 1000.0f)
         {
