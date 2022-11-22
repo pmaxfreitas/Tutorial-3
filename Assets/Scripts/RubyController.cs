@@ -113,11 +113,13 @@ public class RubyController : MonoBehaviour
             PlaySound(hitSound);
 
             ParticleSystem healthDownObject = Instantiate(healthDownPrefab, rigidbody2D.position, Quaternion.identity);
+            healthDownObject.Play();
         }
 
         if(amount > 0)
         {
             ParticleSystem healthUpObject = Instantiate(healthUpPrefab, rigidbody2D.position, Quaternion.identity);
+            healthUpObject.Play();
         }
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
