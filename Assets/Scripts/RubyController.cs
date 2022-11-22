@@ -33,6 +33,7 @@ public class RubyController : MonoBehaviour
     public AudioClip loss;
     public AudioClip throwSound;
     public AudioClip hitSound;
+    public AudioClip collectedClip;
 
     public GameObject healthUpPrefab;
     public GameObject healthDownPrefab;
@@ -244,7 +245,7 @@ public class RubyController : MonoBehaviour
             Destroy(other.gameObject);
             cogs.text = "Cogs: " + cogsValue.ToString();
 
-            PlaySound()
+            PlaySound(collectedClip);
         }
     }
 }
