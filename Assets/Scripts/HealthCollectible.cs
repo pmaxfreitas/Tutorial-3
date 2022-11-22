@@ -19,7 +19,7 @@ public class HealthCollectible : MonoBehaviour
 
                 controller.PlaySound(collectedClip);
 
-                controller.healthUp.Play();
+                controller.healthUp.Emit();
             }
         }
     }
