@@ -178,8 +178,8 @@ public class RubyController : MonoBehaviour
     {
         if(scoreAmount > 0)
         {
-        scoreValue = scoreValue + scoreAmount;
-        score.text = "Robots Fixed: " + scoreValue.ToString() + "/6";
+            scoreValue = scoreValue + scoreAmount;
+            score.text = "Robots Fixed: " + scoreValue.ToString() + "/6";
         }
 
         if(scoreValue >= 1)
