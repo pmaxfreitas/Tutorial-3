@@ -144,4 +144,9 @@ public class RubyController : MonoBehaviour
     {
         audioSource.PlayOneShot(clip);
     }
+
+    public void ChangeScore()
+    {
+        
+    }
 }
