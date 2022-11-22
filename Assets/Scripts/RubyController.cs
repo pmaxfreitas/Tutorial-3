@@ -61,11 +61,14 @@ public class RubyController : MonoBehaviour
 
         bkgMusic = GameObject.Find("BkgMusic").GetComponent<AudioSource>();
 
+        level = 1;
+
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
         if(sceneName == "StageTwo")
         {
             level = 2;
+            score.text = "Robots Fixed: " + scoreValue.ToString() + "/4";
         }
     }
 
@@ -200,7 +203,14 @@ public class RubyController : MonoBehaviour
         if(scoreAmount > 0)
         {
             scoreValue = scoreValue + scoreAmount;
+            if(level == 1)
+            {
             score.text = "Robots Fixed: " + scoreValue.ToString() + "/6";
+            }
+            if(level == 2)
+            {
+            score.text = "Robots Fixed: " + scoreValue.ToString() + "/4";
+            }
         }
 
         if(scoreValue == 6)
@@ -211,6 +221,9 @@ public class RubyController : MonoBehaviour
         if(scoreValue == 4 && level == 2)
         {
             gameOver.text = "You Win!\nCreated by Max Freitas\n\nPress R to Restart";
+            Destroy(GetComponent<SpriteRenderer>());
+            Destroy(GetComponent<BoxCollider2D>());
+            speed = 0;
 
             ChangeMusic(victory);
         }
