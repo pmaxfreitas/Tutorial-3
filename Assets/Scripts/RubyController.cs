@@ -149,6 +149,6 @@ public class RubyController : MonoBehaviour
     {
         scoreValue -= scoreAmount;
 
-        score = "Robots Fixed " + scoreValue.ToString() + "/6";
+        score.Text = "Robots Fixed " + scoreValue.ToString() + "/6";
     }
 }
