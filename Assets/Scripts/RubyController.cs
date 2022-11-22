@@ -100,7 +100,7 @@ public class RubyController : MonoBehaviour
         {
             gameOver.text = "You Lose!\n\nPress R to Restart";
             gameOverBool = true;
-            gameObject.enabled = false;
+            GameObject.SetActive(false);
         }
 
         if(scoreValue >= 1)
