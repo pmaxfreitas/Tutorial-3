@@ -29,6 +29,9 @@ public class RubyController : MonoBehaviour
     public AudioClip throwSound;
     public AudioClip hitSound;
 
+    public ParticleSystem healthUp;
+    public ParticleSystem healthDown;
+
     // Start is called before the first frame update
     void Start()
     {
