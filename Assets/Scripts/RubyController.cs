@@ -99,6 +99,11 @@ public class RubyController : MonoBehaviour
         {
             gameOver.text = "You Lose! Press R to Restart";
             Destroy(this);
+
+            if(Input.GetKey(KeyCode.R))
+            {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            }
         }
 
         if(scoreValue == 1)
