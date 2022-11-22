@@ -44,6 +44,9 @@ public class RubyController : MonoBehaviour
     int scoreValue = 0;
     bool gameOverBool = false;
 
+    public Text cogs;
+    int cogsValue = 4;
+
     public static int level;
 
     void Start()
