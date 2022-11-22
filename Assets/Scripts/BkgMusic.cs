@@ -20,13 +20,13 @@ public class BkgMusic : MonoBehaviour
         if(player.currentHealth <= 0)
         {
             audioSource.clip = loss;
-            audioSource.Play();
+            audioSource.UnPause();
         }
         
         if(player.scoreValue >= 1)
         {
             audioSource.clip = victory;
-            audioSource.Play();
+            audioSource.UnPause();
         }
     }
 }
