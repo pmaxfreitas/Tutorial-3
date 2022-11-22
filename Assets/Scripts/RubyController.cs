@@ -36,8 +36,8 @@ public class RubyController : MonoBehaviour
 
     public Text score;
     public Text gameOver;
-    public int scoreValue = 0;
-    public bool gameOverBool = false;
+    int scoreValue = 0;
+    bool gameOverBool = false;
 
     // Start is called before the first frame update
     void Start()
