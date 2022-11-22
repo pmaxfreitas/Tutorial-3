@@ -33793,7 +33793,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Cogs: 4'
+  m_Text: 'Cogs: 6'
 --- !u!222 &1759286110
 CanvasRenderer:
   m_ObjectHideFlags: 0
