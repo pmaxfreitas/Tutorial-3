@@ -99,7 +99,6 @@ public class RubyController : MonoBehaviour
         if(currentHealth <= 0)
         {
             gameOver.text = "You Lose!\n\nPress R to Restart";
-            Destroy(this);
             gameOverBool = true;
         }
 
