@@ -44,7 +44,8 @@ public class RubyController : MonoBehaviour
     int scoreValue = 0;
     bool gameOverBool = false;
 
-    // Start is called before the first frame update
+    public static int level;
+
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -58,7 +59,6 @@ public class RubyController : MonoBehaviour
         bkgMusic = GameObject.Find("BkgMusic").GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         horizontal = Input.GetAxis("Horizontal");
