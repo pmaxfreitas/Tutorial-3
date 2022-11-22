@@ -36166,7 +36166,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16d1a01a406f47948a87d6e0f198e499, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
   vertical: 0
   changeTime: 3
   smokeEffect: {fileID: 4587090212502906439, guid: fd182145a63a3a24dac3b43dc4f21f76, type: 3}

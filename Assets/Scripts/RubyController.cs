@@ -13,7 +13,7 @@ public class RubyController : MonoBehaviour
     bool isInvincible;
     float invincibleTimer;
 
-    public float speed = 5.0f;
+    public float speed = 4.0f;
 
     Rigidbody2D rigidbody2D;
 
