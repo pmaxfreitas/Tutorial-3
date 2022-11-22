@@ -90,5 +90,8 @@ public class HardEnemyController : MonoBehaviour
         animator.SetTrigger("Fixed");
 
         smokeEffect.Stop();
+
+        RubyController r = GameObject.Find("Ruby").GetComponent<RubyController>();
+        r.ChangeScore(1);
     }
 }
