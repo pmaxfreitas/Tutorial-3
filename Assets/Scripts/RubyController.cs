@@ -192,7 +192,7 @@ public class RubyController : MonoBehaviour
             gameOver.text = "Talk to Jambi to visit stage two!";
         }
 
-        if(scoreValue == 4 & level == 2)
+        if(scoreValue == 10 & level == 2)
         {
             gameOver.text = "You Win!\nCreated by Max Freitas\n\nPress R to Restart";
 
