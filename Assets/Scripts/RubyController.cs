@@ -112,12 +112,12 @@ public class RubyController : MonoBehaviour
             animator.SetTrigger("Hit");
             PlaySound(hitSound);
 
-            GameObject healthDownObject = Instantiate(healthDownPrefab, rigidbody2D.position, Quaternion.identity);
+            GameObject healthDownObject = Instantiate(healthDownPrefab, rigidbody2D.position + Vector2.up * 0.5f, Quaternion.identity);
         }
 
         if(amount > 0)
         {
-            GameObject healthUpObject = Instantiate(healthUpPrefab, rigidbody2D.position, Quaternion.identity);
+            GameObject healthUpObject = Instantiate(healthUpPrefab, rigidbody2D.position + Vector2.up * 0.5f, Quaternion.identity);
         }
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
