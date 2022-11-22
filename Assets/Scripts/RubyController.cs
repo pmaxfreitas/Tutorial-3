@@ -109,16 +109,12 @@ public class RubyController : MonoBehaviour
             gameOverBool = true;
             Destroy(GetComponent<SpriteRenderer>());
             speed = 0;
-
-            ChangeMusic(loss);
         }
 
         if(scoreValue >= 1)
         {
             gameOver.text = "You Win!\nCreated by Max Freitas\n\nPress R to Restart";
             gameOverBool = true;
-
-            ChangeMusic(victory);
         }
 
         if(gameOverBool == true)
