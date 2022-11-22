@@ -216,4 +216,12 @@ public class RubyController : MonoBehaviour
         bkgMusic.clip = music;
         bkgMusic.Play();
     }
+
+    void OnCollisionEnter2D(Collider2D other)
+    {
+        if(other.tag == "Cogs")
+        {
+        Cogs cogs = other.GetComponent<
+        }
+    }
 }
