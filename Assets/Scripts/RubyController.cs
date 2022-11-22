@@ -32,6 +32,9 @@ public class RubyController : MonoBehaviour
     public GameObject healthUpPrefab;
     public GameObject healthDownPrefab;
 
+    public Text score;
+    int scoreValue = 0;
+
     // Start is called before the first frame update
     void Start()
     {
