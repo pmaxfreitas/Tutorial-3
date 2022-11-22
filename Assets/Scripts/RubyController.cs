@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class RubyController : MonoBehaviour
 {
@@ -34,7 +33,7 @@ public class RubyController : MonoBehaviour
     public GameObject healthUpPrefab;
     public GameObject healthDownPrefab;
 
-    public TextMeshProUGUI score;
+    public Text score;
     int scoreValue = 0;
 
     // Start is called before the first frame update
