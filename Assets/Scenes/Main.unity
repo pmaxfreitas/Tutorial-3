@@ -36330,5 +36330,9 @@ PrefabInstance:
       propertyPath: gameOver
       value: 
       objectReference: {fileID: 1846652002}
+    - target: {fileID: 8418664856855592201, guid: 56d809d48921e964ea0cc09938cb35b6, type: 3}
+      propertyPath: victoryMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 94226819096503940a3dd07aada2a874, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56d809d48921e964ea0cc09938cb35b6, type: 3}
