@@ -16,6 +16,7 @@ public class RubyController : MonoBehaviour
     float invincibleTimer;
 
     public float speed = 4.0f;
+    public float power = 1.0f;
 
     Rigidbody2D rigidbody2D;
 
@@ -144,7 +145,7 @@ public class RubyController : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 position = rigidbody2D.position;
-        position.x = position.x + speed * horizontal * Time.deltaTime;
+        position.x = position.x + speed *  * horizontal * Time.deltaTime;
         position.y = position.y + speed * vertical * Time.deltaTime;
 
         rigidbody2D.MovePosition(position);
