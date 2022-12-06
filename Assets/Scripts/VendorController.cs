@@ -64,5 +64,7 @@ public class VendorController : MonoBehaviour
         {
             player.ChangeHealth(1);
         }
+
+        GameObject healthUpObject = Instantiate(player.healthUpPrefab, player.GetComponent<Rigidbody2D>().position + Vector2.up * 0.5f, Quaternion.identity);
     }
 }
