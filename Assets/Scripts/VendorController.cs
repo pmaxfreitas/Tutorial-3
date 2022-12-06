@@ -41,6 +41,7 @@ public class VendorController : MonoBehaviour
         if (gameObject.tag == "Cogs")
         {
             player.cogsValue += 10;
+            player.cogs.text = "Cogs: " + cogsValue.ToString();
         }
     }
 }
