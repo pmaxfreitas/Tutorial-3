@@ -19,7 +19,7 @@ public class RubyController : MonoBehaviour
     public float power = 1.0f;
 
     float powerTimer = -1.0f;
-    float powerDuration = 5.0f;
+    float powerDuration = 0.0f;
 
     Rigidbody2D rigidbody2D;
 
@@ -144,7 +144,7 @@ public class RubyController : MonoBehaviour
             }
         }
 
-        if (power)
+        if (powerDuration >= 0)
         {
             powerTimer -= Time.deltaTime;
             if (powerTimer < 0)
