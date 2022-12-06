@@ -48,7 +48,7 @@ public class VendorController : MonoBehaviour
         player.cogsValue += 10;
         player.cogs.text = "Cogs: " + player.cogsValue.ToString();
         }
-        if (EventSystem.current == itemTwo)
+        if (EventSystem.current.currentSelectedGameObject == itemTwo)
         {
             player.ChangeHealth(1);
         }
