@@ -37,7 +37,8 @@ public class VendorController : MonoBehaviour
 
     public void SellItem()
     {
-        if (gameObject.tag == "ItemOne")
+        RubyController player = GameObject.Find("Ruby").GetComponent<RubyController>();
+        if (gameObject.tag == "Cogs")
         {
             
         }
