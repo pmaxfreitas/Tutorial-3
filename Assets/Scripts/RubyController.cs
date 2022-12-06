@@ -53,6 +53,8 @@ public class RubyController : MonoBehaviour
     public Text coins;
     public int coinsAmount = 0;
 
+    public int force;
+
     public static int level;
 
     void Start()
@@ -149,6 +151,7 @@ public class RubyController : MonoBehaviour
             if (powerTimer < 0)
             {
                 power = 1.0f;
+                force = 300;
                 gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             }
         }
@@ -200,14 +203,14 @@ public class RubyController : MonoBehaviour
         }
     }
 
-    void Launch()
+    public void Launch(int force)
     {
         if(cogsValue > 0)
         {
         GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2D.position + Vector2.up * 0.5f, Quaternion.identity);
 
         Projectile projectile = projectileObject.GetComponent<Projectile>();
-        projectile.Launch(lookDirection, 300);
+        projectile.Launch(lookDirection, force);
 
         animator.SetTrigger("Launch");
         PlaySound(throwSound);

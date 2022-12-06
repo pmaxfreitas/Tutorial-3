@@ -50,6 +50,8 @@ public class VendorController : MonoBehaviour
             player.power = 2.0f;
             player.powerTimer = powerDuration;
 
+            player.Launch(500);
+
             player.invincibleTimer = 10.0f;
             player.isInvincible = true;
 
