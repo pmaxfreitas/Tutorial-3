@@ -205,9 +205,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Hey!
-
-    Help me fix all those broken robots!'
+  m_text: Sample Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
@@ -29340,7 +29338,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &739167267
 RectTransform:
   m_ObjectHideFlags: 0
@@ -33464,7 +33462,7 @@ GameObject:
   - component: {fileID: 1645898214}
   - component: {fileID: 1645898213}
   m_Layer: 11
-  m_Name: UIDialogBox
+  m_Name: VendorDialogBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
