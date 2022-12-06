@@ -49,7 +49,7 @@ public class VendorController : MonoBehaviour
         }
         else if (itemTwo != null)
         {
-            play.ChangeHealth(1);
+            player.ChangeHealth(1);
         }
     }
 }
