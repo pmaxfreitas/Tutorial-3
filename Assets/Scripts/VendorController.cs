@@ -14,6 +14,8 @@ public class VendorController : MonoBehaviour
     public GameObject itemOne;
     public GameObject itemTwo;
 
+    public AudioClip powerUpSound;
+
     public float powerDuration = 10.0f;
 
     // Start is called before the first frame update
@@ -56,6 +58,7 @@ public class VendorController : MonoBehaviour
             player.isInvincible = true;
 
             player.GetComponent<SpriteRenderer>().color = Color.blue;
+            player.PlaySound(powerUpSound);
         }
         if (EventSystem.current.currentSelectedGameObject == itemTwo)
         {
