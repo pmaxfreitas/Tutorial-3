@@ -53,7 +53,7 @@ public class RubyController : MonoBehaviour
     public Text coins;
     public int coinsAmount = 0;
 
-    public int force;
+    public int force = 300;
 
     public static int level;
 
@@ -108,7 +108,7 @@ public class RubyController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.C))
         {
-            Launch();
+            Launch(force);
         }
 
         if (Input.GetKeyDown(KeyCode.X))
