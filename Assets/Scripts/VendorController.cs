@@ -51,7 +51,7 @@ public class VendorController : MonoBehaviour
             player.powerTimer = powerDuration;
             player.isInvincible = true;
 
-            player.renderer.
+            player.image.color = "Blue";
         }
         if (EventSystem.current.currentSelectedGameObject == itemTwo)
         {
