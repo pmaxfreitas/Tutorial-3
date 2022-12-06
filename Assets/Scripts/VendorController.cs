@@ -46,7 +46,7 @@ public class VendorController : MonoBehaviour
         if (EventSystem.current.currentSelectedGameObject == itemOne)
         {
             player.power = 1.5f;
-            player.powerDuration = 5.0f;
+            player.powerTimer = player.powerDuration;
         }
         if (EventSystem.current.currentSelectedGameObject == itemTwo)
         {
