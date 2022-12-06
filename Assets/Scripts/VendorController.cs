@@ -63,6 +63,7 @@ public class VendorController : MonoBehaviour
         if (EventSystem.current.currentSelectedGameObject == itemTwo)
         {
             player.maxHealth++;
+            player.currentHealth++;
         }
 
         GameObject healthUpObject = Instantiate(player.healthUpPrefab, player.GetComponent<Rigidbody2D>().position + Vector2.up * 0.5f, Quaternion.identity);
