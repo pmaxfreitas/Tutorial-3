@@ -42,7 +42,7 @@ public class VendorController : MonoBehaviour
     public void SellItem()
     {
         RubyController player = GameObject.Find("Ruby").GetComponent<RubyController>();
-        if (itemOne)
+        if (GameObject == ItemOne)
         {
         player.cogsValue += 10;
         player.cogs.text = "Cogs: " + player.cogsValue.ToString();
