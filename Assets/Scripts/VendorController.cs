@@ -49,6 +49,8 @@ public class VendorController : MonoBehaviour
         {
             player.power = 2.0f;
             player.powerTimer = powerDuration;
+
+            player.invincibleTimer = 10.0f;
             player.isInvincible = true;
 
             player.GetComponent<SpriteRenderer>().color = Color.blue;

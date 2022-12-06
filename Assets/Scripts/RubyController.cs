@@ -13,7 +13,7 @@ public class RubyController : MonoBehaviour
     public int currentHealth;
 
     public bool isInvincible;
-    float invincibleTimer;
+    public float invincibleTimer;
 
     public float speed = 4.0f;
     public float power = 1.0f;
