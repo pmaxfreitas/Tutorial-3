@@ -9,6 +9,8 @@ public class VendorController : MonoBehaviour
 
     float timerDisplay;
 
+    public Button itemOne;
+
     // Start is called before the first frame update
     void Start()
     {
