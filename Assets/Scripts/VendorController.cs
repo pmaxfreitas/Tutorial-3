@@ -47,7 +47,7 @@ public class VendorController : MonoBehaviour
         player.cogsValue += 10;
         player.cogs.text = "Cogs: " + player.cogsValue.ToString();
         }
-        else if (itemTwo != null)
+        if (itemTwo != null)
         {
             player.ChangeHealth(1);
         }
