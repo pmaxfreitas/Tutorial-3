@@ -52,7 +52,7 @@ public class VendorController : MonoBehaviour
             player.powerUp = 2.0f;
             player.powerUpTimer = powerDuration;
 
-            player.force = 500;
+            player.force = 600;
 
             player.invincibleTimer = 10.0f;
             player.isInvincible = true;
