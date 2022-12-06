@@ -117,6 +117,13 @@ public class RubyController : MonoBehaviour
                 {
                     character.DisplayDialog();
                 }
+
+                VendorController vendor = hit.collider.GetComponent<VendorController>();
+                if (vendor != null)
+                {
+                    vendor.DisplayDialog();
+                    vendor.animator.Seti
+                }
             }
         }
 
