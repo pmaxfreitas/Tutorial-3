@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 4c510000
-      m_LastClickedID: 20812
-      m_ExpandedIDs: befafffff84f0000a8500000b8500000f65000004c510000f0510000
+      m_SelectedIDs: 8a500000
+      m_LastClickedID: 20618
+      m_ExpandedIDs: befaffffb8500000f65000004c510000f0510000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -355,7 +355,7 @@ MonoBehaviour:
       containerId: overlay-toolbar__top
       floating: 0
       collapsed: 0
-      displayed: 0
+      displayed: 1
       snapOffset: {x: 0, y: 0}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
@@ -526,9 +526,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -5.082668, y: 1.8080369, z: 0.16099985}
+    m_Target: {x: -3.3983707, y: -1.4091485, z: -0.228513}
     speed: 2
-    m_Value: {x: -5.082668, y: 1.8080369, z: 0.16099985}
+    m_Value: {x: -3.3983707, y: -1.4091485, z: -0.228513}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -565,9 +565,9 @@ MonoBehaviour:
       m_Size: {x: 1, y: 1}
     zGrid:
       m_Fade:
-        m_Target: 1
+        m_Target: 0
         speed: 2
-        m_Value: 1
+        m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
       m_Pivot: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
@@ -579,9 +579,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2.3895178
+    m_Target: 9.461313
     speed: 2
-    m_Value: 2.3895178
+    m_Value: 9.461313
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -837,21 +837,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Art/Sprites
+    - Assets/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Art/Sprites
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: F:\UCF\DIG3480\Tutorial 3\dig3480-f22-t3-rubys_new_adventure-pmaxfreitas
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 26560000
-    m_LastClickedID: 22054
+    m_SelectedIDs: 4c560000
+    m_LastClickedID: 22092
     m_ExpandedIDs: 0000000022560000245600002656000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -905,9 +905,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 4c510000
-    m_LastClickedInstanceID: 20812
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 8a500000
+    m_LastClickedInstanceID: 20618
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300007a740000d07400005274000010560000fa4f0000ba1a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1025,7 +1025,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 171
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
