@@ -122,7 +122,7 @@ public class RubyController : MonoBehaviour
                 if (vendor != null)
                 {
                     vendor.DisplayDialog();
-                    hit.collider.GetComponent<Animator>().Set
+                    hit.collider.GetComponent<Animator>().SetInteger("State", 1);
                 }
             }
         }
