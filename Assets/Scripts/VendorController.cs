@@ -45,8 +45,7 @@ public class VendorController : MonoBehaviour
         RubyController player = GameObject.Find("Ruby").GetComponent<RubyController>();
         if (EventSystem.current.currentSelectedGameObject == itemOne)
         {
-        player.cogsValue += 10;
-        player.cogs.text = "Cogs: " + player.cogsValue.ToString();
+            
         }
         if (EventSystem.current.currentSelectedGameObject == itemTwo)
         {
