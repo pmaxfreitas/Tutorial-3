@@ -149,6 +149,7 @@ public class RubyController : MonoBehaviour
             if (powerTimer < 0)
             {
                 power = 1.0f;
+                gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             }
         }
     }
