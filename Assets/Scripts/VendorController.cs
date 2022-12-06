@@ -11,8 +11,8 @@ public class VendorController : MonoBehaviour
 
     float timerDisplay;
 
-    public Button itemOne;
-    public Button itemTwo;
+    public GameObject itemOne;
+    public GameObject itemTwo;
 
     // Start is called before the first frame update
     void Start()
@@ -43,12 +43,12 @@ public class VendorController : MonoBehaviour
     public void SellItem()
     {
         RubyController player = GameObject.Find("Ruby").GetComponent<RubyController>();
-        if (EventSystem.current.currentSelectedGameObject == itemOne)
+        if (EventSystem.current == itemOne)
         {
         player.cogsValue += 10;
         player.cogs.text = "Cogs: " + player.cogsValue.ToString();
         }
-        if (EventSystem.current.currentSelectedGameObject == itemTwo)
+        if (EventSystem.current == itemTwo)
         {
             player.ChangeHealth(1);
         }
