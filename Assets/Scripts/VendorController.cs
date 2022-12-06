@@ -14,8 +14,6 @@ public class VendorController : MonoBehaviour
     public GameObject itemOne;
     public GameObject itemTwo;
 
-    public EventSystem eventSystem;
-
     // Start is called before the first frame update
     void Start()
     {
