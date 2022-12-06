@@ -18,6 +18,8 @@ public class RubyController : MonoBehaviour
     public float speed = 4.0f;
     public float power = 1.0f;
 
+    float powerTimer;
+
     Rigidbody2D rigidbody2D;
 
     float horizontal;
@@ -139,6 +141,11 @@ public class RubyController : MonoBehaviour
             {
                 SceneManager.LoadScene("Main");
             }
+        }
+
+        if (power > 1)
+        {
+            
         }
     }
 
