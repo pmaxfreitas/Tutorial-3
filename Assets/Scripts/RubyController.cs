@@ -118,7 +118,7 @@ public class RubyController : MonoBehaviour
                     character.DisplayDialog();
                 }
                 
-                VendorCharacter vendor = GameObject.Find("Vendor").GetComponent<NonPlayerCharacter>();
+                NonPlayerCharacter vendor = GameObject.Find("Vendor").GetComponent<NonPlayerCharacter>();
                 if (vendor != null)
                 {
                     vendor.DisplayDialog();
