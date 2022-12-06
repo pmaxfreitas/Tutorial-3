@@ -34,4 +34,9 @@ public class VendorController : MonoBehaviour
         timerDisplay = displayTime;
         dialogBox.SetActive(true);
     }
+
+    void SellItems();
+    {
+        
+    }
 }

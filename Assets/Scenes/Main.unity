@@ -37258,5 +37258,9 @@ PrefabInstance:
       propertyPath: gameOver
       value: 
       objectReference: {fileID: 1846652002}
+    - target: {fileID: 8418664856855592201, guid: 56d809d48921e964ea0cc09938cb35b6, type: 3}
+      propertyPath: vendorSound
+      value: 
+      objectReference: {fileID: 8300000, guid: a4d302bc7fb7c884bbcf820f65b131c5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 56d809d48921e964ea0cc09938cb35b6, type: 3}
