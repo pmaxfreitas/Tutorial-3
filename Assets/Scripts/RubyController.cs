@@ -200,14 +200,14 @@ public class RubyController : MonoBehaviour
         }
     }
 
-    void Launch()
+    void Launch(int force)
     {
         if(cogsValue > 0)
         {
         GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2D.position + Vector2.up * 0.5f, Quaternion.identity);
 
         Projectile projectile = projectileObject.GetComponent<Projectile>();
-        projectile.Launch(lookDirection, 300);
+        projectile.Launch(lookDirection, force);
 
         animator.SetTrigger("Launch");
         PlaySound(throwSound);
