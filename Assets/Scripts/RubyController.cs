@@ -16,9 +16,9 @@ public class RubyController : MonoBehaviour
     public float invincibleTimer;
 
     public float speed = 4.0f;
-    public float power = 1.0f;
+    public float powerUp = 1.0f;
 
-    public float powerTimer = -1.0f;
+    public float powerUpTimer = -1.0f;
 
     Rigidbody2D rigidbody2D;
 
@@ -145,12 +145,12 @@ public class RubyController : MonoBehaviour
             }
         }
 
-        if (powerTimer >= 0)
+        if (powerUpTimer >= 0)
         {
-            powerTimer -= Time.deltaTime;
-            if (powerTimer < 0)
+            powerUpTimer -= Time.deltaTime;
+            if (powerUpTimer < 0)
             {
-                power = 1.0f;
+                powerUp = 1.0f;
                 force = 300;
                 gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             }
@@ -160,8 +160,8 @@ public class RubyController : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 position = rigidbody2D.position;
-        position.x = position.x + speed * power * horizontal * Time.deltaTime;
-        position.y = position.y + speed * power * vertical * Time.deltaTime;
+        position.x = position.x + speed * powerUp * horizontal * Time.deltaTime;
+        position.y = position.y + speed * powerUp * vertical * Time.deltaTime;
 
         rigidbody2D.MovePosition(position);
     }

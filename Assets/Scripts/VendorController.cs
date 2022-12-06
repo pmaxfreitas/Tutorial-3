@@ -47,8 +47,8 @@ public class VendorController : MonoBehaviour
         RubyController player = GameObject.Find("Ruby").GetComponent<RubyController>();
         if (EventSystem.current.currentSelectedGameObject == itemOne)
         {
-            player.power = 2.0f;
-            player.powerTimer = powerDuration;
+            player.powerUp = 2.0f;
+            player.powerUpTimer = powerDuration;
 
             player.force = 600;
 
