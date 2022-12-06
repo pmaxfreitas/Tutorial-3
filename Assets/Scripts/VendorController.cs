@@ -49,6 +49,9 @@ public class VendorController : MonoBehaviour
         {
             player.power = 2.0f;
             player.powerTimer = powerDuration;
+            player.isInvincible = true;
+
+            player.renderer.
         }
         if (EventSystem.current.currentSelectedGameObject == itemTwo)
         {
