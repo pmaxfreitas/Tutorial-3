@@ -45,7 +45,7 @@ public class VendorController : MonoBehaviour
         RubyController player = GameObject.Find("Ruby").GetComponent<RubyController>();
         if (EventSystem.current.currentSelectedGameObject == itemOne)
         {
-            
+            player.power = 1.5f;
         }
         if (EventSystem.current.currentSelectedGameObject == itemTwo)
         {
