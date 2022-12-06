@@ -47,6 +47,9 @@ public class RubyController : MonoBehaviour
     public Text cogs;
     public int cogsValue = 6;
 
+    public Text coins;
+    public int coinsAmount = 0;
+
     public static int level;
 
     void Start()
