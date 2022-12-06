@@ -34,6 +34,7 @@ public class RubyController : MonoBehaviour
     public AudioClip throwSound;
     public AudioClip hitSound;
     public AudioClip collectedClip;
+    public AudioClip vendorSound;
 
     public GameObject healthUpPrefab;
     public GameObject healthDownPrefab;
@@ -123,6 +124,7 @@ public class RubyController : MonoBehaviour
                 {
                     vendor.DisplayDialog();
                     hit.collider.GetComponent<Animator>().SetTrigger("Jump");
+                    PlaySound(vendorSound);
                 }
             }
         }
