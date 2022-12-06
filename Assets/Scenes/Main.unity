@@ -2549,8 +2549,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   displayTime: 4
   dialogBox: {fileID: 739167266}
-  itemOne: {fileID: 1105817668}
-  itemTwo: {fileID: 1076786587}
+  itemOne: {fileID: 1105817666}
+  itemTwo: {fileID: 1076786586}
 --- !u!1001 &327828468
 PrefabInstance:
   m_ObjectHideFlags: 0
