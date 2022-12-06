@@ -11,6 +11,7 @@ public class VendorController : MonoBehaviour
     float timerDisplay;
 
     public Button itemOne;
+    public Button itemTwo;
 
     // Start is called before the first frame update
     void Start()
@@ -46,5 +47,6 @@ public class VendorController : MonoBehaviour
         player.cogsValue += 10;
         player.cogs.text = "Cogs: " + player.cogsValue.ToString();
         }
+        else if (itemTwo)
     }
 }
