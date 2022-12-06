@@ -61,6 +61,8 @@ public class RubyController : MonoBehaviour
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
 
+        currentHealth = maxHealth;
+
         animator = GetComponent<Animator>();
 
         audioSource = GetComponent<AudioSource>();
@@ -84,8 +86,6 @@ public class RubyController : MonoBehaviour
         vertical = Input.GetAxis("Vertical");
 
         Vector2 move = new Vector2(horizontal, vertical);
-
-        currentHealth = maxHealth;
 
         if (!Mathf.Approximately(move.x, 0.0f) || !Mathf.Approximately(move.y, 0.0f))
         {
