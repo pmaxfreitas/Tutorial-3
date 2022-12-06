@@ -18,8 +18,7 @@ public class RubyController : MonoBehaviour
     public float speed = 4.0f;
     public float power = 1.0f;
 
-    float powerTimer = -1.0f;
-    float powerDuration = 5.0f;
+    public float powerTimer = -1.0f;
 
     Rigidbody2D rigidbody2D;
 

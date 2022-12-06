@@ -14,6 +14,8 @@ public class VendorController : MonoBehaviour
     public GameObject itemOne;
     public GameObject itemTwo;
 
+    public float powerDuration = 5.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +48,7 @@ public class VendorController : MonoBehaviour
         if (EventSystem.current.currentSelectedGameObject == itemOne)
         {
             player.power = 1.5f;
-            player.powerTimer = player.powerDuration;
+            player.powerTimer = powerDuration;
         }
         if (EventSystem.current.currentSelectedGameObject == itemTwo)
         {
