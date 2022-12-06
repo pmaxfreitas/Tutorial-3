@@ -34,4 +34,12 @@ public class VendorController : MonoBehaviour
         timerDisplay = displayTime;
         dialogBox.SetActive(true);
     }
+
+    public void SellItem()
+    {
+        if (gameObject.tag == "ItemOne")
+        {
+            
+        }
+    }
 }
