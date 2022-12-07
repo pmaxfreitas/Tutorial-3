@@ -47,7 +47,7 @@ public class VendorController : MonoBehaviour
     public void SellItem()
     {
         RubyController player = GameObject.Find("Ruby").GetComponent<RubyController>();
-        if (EventSystem.current.currentSelectedGameObject == itemOne && player.coinsAmount == 5)
+        if (EventSystem.current.currentSelectedGameObject == itemOne && player.coinsAmount >= 5)
         {
             player.powerUp = 2.0f;
             player.powerUpTimer = powerDuration;
@@ -64,7 +64,7 @@ public class VendorController : MonoBehaviour
 
             GameObject healthUpObject = Instantiate(player.healthUpPrefab, player.GetComponent<Rigidbody2D>().position + Vector2.up * 0.5f, Quaternion.identity);
         }
-        if (EventSystem.current.currentSelectedGameObject == itemTwo && player.coinsAmount == 10)
+        if (EventSystem.current.currentSelectedGameObject == itemTwo && player.coinsAmount >= 10)
         {
             player.maxHealth++;
             player.currentHealth++;
