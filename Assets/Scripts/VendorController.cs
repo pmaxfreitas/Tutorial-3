@@ -59,13 +59,16 @@ public class VendorController : MonoBehaviour
 
             player.GetComponent<SpriteRenderer>().color = Color.blue;
             player.PlaySound(powerUpSound);
+
+            GameObject healthUpObject = Instantiate(player.healthUpPrefab, player.GetComponent<Rigidbody2D>().position + Vector2.up * 0.5f, Quaternion.identity);
         }
         if (EventSystem.current.currentSelectedGameObject == itemTwo && player.coinsAmount == 10)
         {
             player.maxHealth++;
             player.currentHealth++;
+            
+            GameObject healthUpObject = Instantiate(player.healthUpPrefab, player.GetComponent<Rigidbody2D>().position + Vector2.up * 0.5f, Quaternion.identity);
         }
 
-        GameObject healthUpObject = Instantiate(player.healthUpPrefab, player.GetComponent<Rigidbody2D>().position + Vector2.up * 0.5f, Quaternion.identity);
     }
 }
