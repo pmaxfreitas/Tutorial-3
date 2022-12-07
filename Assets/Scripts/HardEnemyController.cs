@@ -92,6 +92,7 @@ public class HardEnemyController : MonoBehaviour
         smokeEffect.Stop();
 
         RubyController r = GameObject.Find("Ruby").GetComponent<RubyController>();
+        r.coinsAmount++;
         r.ChangeScore(1);
     }
 }

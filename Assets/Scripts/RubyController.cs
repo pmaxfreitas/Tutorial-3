@@ -278,7 +278,7 @@ public class RubyController : MonoBehaviour
         
         if(other.tag == "Coins")
         {
-            coinsAmount += 1;
+            coinsAmount++;
             Destroy(other.gameObject);
             coins.text = "Coins: " + coinsAmount.ToString();
 
