@@ -275,5 +275,14 @@ public class RubyController : MonoBehaviour
 
             PlaySound(collectedClip);
         }
+        
+        if(other.tag == "Coins")
+        {
+            cogsValue += 6;
+            Destroy(other.gameObject);
+            cogs.text = "Cogs: " + cogsValue.ToString();
+
+            PlaySound(collectedClip);
+        }
     }
 }
