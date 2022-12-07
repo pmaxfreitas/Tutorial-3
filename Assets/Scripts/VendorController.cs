@@ -47,7 +47,7 @@ public class VendorController : MonoBehaviour
     public void SellItem()
     {
         RubyController player = GameObject.Find("Ruby").GetComponent<RubyController>();
-        if (EventSystem.current.currentSelectedGameObject == itemOne)
+        if (EventSystem.current.currentSelectedGameObject == itemOne && player.coinsAmount == 5)
         {
             player.powerUp = 2.0f;
             player.powerUpTimer = powerDuration;
@@ -60,7 +60,7 @@ public class VendorController : MonoBehaviour
             player.GetComponent<SpriteRenderer>().color = Color.blue;
             player.PlaySound(powerUpSound);
         }
-        if (EventSystem.current.currentSelectedGameObject == itemTwo)
+        if (EventSystem.current.currentSelectedGameObject == itemTwo && player.coinsAmount == 10)
         {
             player.maxHealth++;
             player.currentHealth++;
