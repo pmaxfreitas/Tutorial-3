@@ -91,6 +91,7 @@ public class EnemyController : MonoBehaviour
 
         RubyController r = GameObject.Find("Ruby").GetComponent<RubyController>();
         r.coinsAmount++;
+        r.coins.text = "Coins: " + r.coinsAmount.ToString();
         r.ChangeScore(1);
     }
 }
