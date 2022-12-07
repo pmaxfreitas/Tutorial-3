@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class RubyController : MonoBehaviour
 {
@@ -8,12 +10,15 @@ public class RubyController : MonoBehaviour
     public float timeInvincible = 2.0f;
 
     public int health { get { return currentHealth; } }
-    int currentHealth;
+    public int currentHealth;
 
-    bool isInvincible;
-    float invincibleTimer;
+    public bool isInvincible;
+    public float invincibleTimer;
 
-    public float speed = 3.0f;
+    public float speed = 4.0f;
+    public float powerUp = 1.0f;
+
+    public float powerUpTimer = -1.0f;
 
     Rigidbody2D rigidbody2D;
 
@@ -26,10 +31,32 @@ public class RubyController : MonoBehaviour
     public GameObject projectilePrefab;
 
     AudioSource audioSource;
+    AudioSource bkgMusic;
+    public AudioClip victory;
+    public AudioClip loss;
     public AudioClip throwSound;
     public AudioClip hitSound;
+    public AudioClip collectedClip;
+    public AudioClip vendorSound;
 
-    // Start is called before the first frame update
+    public GameObject healthUpPrefab;
+    public GameObject healthDownPrefab;
+
+    public Text score;
+    public Text gameOver;
+    int scoreValue = 0;
+    bool gameOverBool = false;
+
+    public Text cogs;
+    public int cogsValue = 6;
+
+    public Text coins;
+    public int coinsAmount = 0;
+
+    public int force = 300;
+
+    public static int level;
+
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -39,11 +66,24 @@ public class RubyController : MonoBehaviour
         animator = GetComponent<Animator>();
 
         audioSource = GetComponent<AudioSource>();
+
+        bkgMusic = GameObject.Find("BkgMusic").GetComponent<AudioSource>();
+
+        level = 1;
+
+        Scene currentScene = SceneManager.GetActiveScene();
+        string sceneName = currentScene.name;
+        if(sceneName == "StageTwo")
+        {
+            level = 2;
+            score.text = "Robots Fixed: " + scoreValue.ToString() + "/4";
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
+        coins.text = "Coins: " + coinsAmount.ToString();
+        
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
 
@@ -70,7 +110,7 @@ public class RubyController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.C))
         {
-            Launch();
+            Launch(force);
         }
 
         if (Input.GetKeyDown(KeyCode.X))
@@ -79,10 +119,42 @@ public class RubyController : MonoBehaviour
             if (hit.collider != null)
             {
                 NonPlayerCharacter character = hit.collider.GetComponent<NonPlayerCharacter>();
-                if (character != null)
+                if(scoreValue == 6 && character != null)
+                {
+                    SceneManager.LoadScene("StageTwo");
+                    level = 2;
+                }
+                else if (character != null)
                 {
                     character.DisplayDialog();
                 }
+
+                VendorController vendor = hit.collider.GetComponent<VendorController>();
+                if (vendor != null)
+                {
+                    vendor.DisplayDialog();
+                    hit.collider.GetComponent<Animator>().SetTrigger("Jump");
+                    PlaySound(vendorSound);
+                }
+            }
+        }
+
+        if(gameOverBool == true)
+        {
+            if (Input.GetKey(KeyCode.R))
+            {
+                SceneManager.LoadScene("Main");
+            }
+        }
+
+        if (powerUpTimer >= 0)
+        {
+            powerUpTimer -= Time.deltaTime;
+            if (powerUpTimer < 0)
+            {
+                powerUp = 1.0f;
+                force = 300;
+                gameObject.GetComponent<SpriteRenderer>().color = Color.white;
             }
         }
     }
@@ -90,8 +162,8 @@ public class RubyController : MonoBehaviour
     void FixedUpdate()
     {
         Vector2 position = rigidbody2D.position;
-        position.x = position.x + speed * horizontal * Time.deltaTime;
-        position.y = position.y + speed * vertical * Time.deltaTime;
+        position.x = position.x + speed * powerUp * horizontal * Time.deltaTime;
+        position.y = position.y + speed * powerUp * vertical * Time.deltaTime;
 
         rigidbody2D.MovePosition(position);
     }
@@ -108,26 +180,111 @@ public class RubyController : MonoBehaviour
 
             animator.SetTrigger("Hit");
             PlaySound(hitSound);
+
+            GameObject healthDownObject = Instantiate(healthDownPrefab, rigidbody2D.position + Vector2.up * 0.5f, Quaternion.identity);
+        }
+
+        if(amount > 0)
+        {
+            GameObject healthUpObject = Instantiate(healthUpPrefab, rigidbody2D.position + Vector2.up * 0.5f, Quaternion.identity);
         }
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
 
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
+
+        if(currentHealth <= 0)
+        {
+            gameOver.text = "You Lose!\n\nPress R to Restart";
+            gameOverBool = true;
+            Destroy(GetComponent<SpriteRenderer>());
+            Destroy(GetComponent<BoxCollider2D>());
+            speed = 0;
+
+            ChangeMusic(loss);
+        }
     }
 
-    void Launch()
+    public void Launch(int force)
     {
+        if(cogsValue > 0)
+        {
         GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2D.position + Vector2.up * 0.5f, Quaternion.identity);
 
         Projectile projectile = projectileObject.GetComponent<Projectile>();
-        projectile.Launch(lookDirection, 300);
+        projectile.Launch(lookDirection, force);
 
         animator.SetTrigger("Launch");
         PlaySound(throwSound);
+
+        cogsValue--;
+        cogs.text = "Cogs: " + cogsValue.ToString();
+        }
     }
 
     public void PlaySound(AudioClip clip)
     {
         audioSource.PlayOneShot(clip);
+    }
+
+    public void ChangeScore(int scoreAmount)
+    {
+        if(scoreAmount > 0)
+        {
+            scoreValue = scoreValue + scoreAmount;
+            if(level == 1)
+            {
+            score.text = "Robots Fixed: " + scoreValue.ToString() + "/6";
+            }
+            if(level == 2)
+            {
+            score.text = "Robots Fixed: " + scoreValue.ToString() + "/4";
+            }
+        }
+
+        if(scoreValue == 6)
+        {
+            gameOver.text = "Talk to Jambi to visit stage two!";
+        }
+
+        if(scoreValue == 4 && level == 2)
+        {
+            gameOver.text = "You Win!\nCreated by Max Freitas\n\nPress R to Restart";
+            gameOverBool = true;
+            Destroy(GetComponent<SpriteRenderer>());
+            Destroy(GetComponent<BoxCollider2D>());
+            speed = 0;
+
+            ChangeMusic(victory);
+        }
+    }
+
+    public void ChangeMusic(AudioClip music)
+    {
+        bkgMusic.Stop();
+        bkgMusic.volume = 1;
+        bkgMusic.clip = music;
+        bkgMusic.Play();
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.tag == "Cogs")
+        {
+            cogsValue += 6;
+            Destroy(other.gameObject);
+            cogs.text = "Cogs: " + cogsValue.ToString();
+
+            PlaySound(collectedClip);
+        }
+        
+        if(other.tag == "Coins")
+        {
+            coinsAmount++;
+            Destroy(other.gameObject);
+            coins.text = "Coins: " + coinsAmount.ToString();
+
+            PlaySound(collectedClip);
+        }
     }
 }

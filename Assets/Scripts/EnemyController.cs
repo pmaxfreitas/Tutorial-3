@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    public float speed = 3.0f;
+    public float speed = 2.0f;
     public bool vertical;
     public float changeTime = 3.0f;
 
@@ -88,5 +88,10 @@ public class EnemyController : MonoBehaviour
         animator.SetTrigger("Fixed");
 
         smokeEffect.Stop();
+
+        RubyController r = GameObject.Find("Ruby").GetComponent<RubyController>();
+        r.coinsAmount++;
+        r.coins.text = "Coins: " + r.coinsAmount.ToString();
+        r.ChangeScore(1);
     }
 }
