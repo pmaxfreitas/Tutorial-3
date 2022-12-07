@@ -71,6 +71,8 @@ public class VendorController : MonoBehaviour
 
             player.coinsAmount -= 10;
 
+            player.PlaySound(powerUpSound);
+
             GameObject healthUpObject = Instantiate(player.healthUpPrefab, player.GetComponent<Rigidbody2D>().position + Vector2.up * 0.5f, Quaternion.identity);
         }
 
