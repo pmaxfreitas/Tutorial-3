@@ -82,6 +82,8 @@ public class RubyController : MonoBehaviour
 
     void Update()
     {
+        coins.text = "Coins: " + coinsAmount.ToString();
+        
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
 
